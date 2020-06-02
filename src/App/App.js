@@ -3,10 +3,16 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import './App.scss';
 
-import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 
+import Auth from '../components/pages/Auth/Auth';
+import NewScatt from '../components/pages/NewScatt/NewScatt';
+import SingleScatt from '../components/pages/SingleScatt/SingleScatt';
+import Home from '../components/pages/Home/Home';
+import EditScatt from '../components/pages/EditScatt/EditScatt';
+
 import fdConnection from '../helpers/data/connection';
+
 
 fdConnection();
 
@@ -33,8 +39,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <MyNavbar />
-        <h1 className="mt-3">Scatt Surprise React App</h1>
+        <h1 className="mt-3">Scatt Surprise</h1>
         <Auth />
+        <EditScatt />
+        <Home />
+        <NewScatt />
+        <SingleScatt />
       </div>
     );
   }
