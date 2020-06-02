@@ -3,7 +3,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import './Auth.scss';
-import firebaseApp from '../../../helpers/data/connection';
 
 class Auth extends React.Component {
   loginClickEvent = (e) => {
