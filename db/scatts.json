@@ -67,7 +67,7 @@
       "uid": "p00pin"
     },
     "scatt7": {
-      "color": "mustard",
+      "color": "yellow",
       "shape": "swirl",
       "size": "large",
       "temperature": 115,
@@ -166,7 +166,7 @@
       "uid": "12345"
     },
     "scatt16": {
-      "color": "yellow-y brown",
+      "color": "burlywood",
       "shape": "swirly mountain",
       "size": "medium-ish",
       "temperature": 99,
