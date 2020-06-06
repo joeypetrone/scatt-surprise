@@ -17,7 +17,7 @@ class Home extends React.Component {
         <h1>Home</h1>
         <button className="btn btn-dark" onClick={this.editEvent}>Edit a thing</button>
         <Link to='/scatts/scatt12345'>View Single</Link>
-        <Link to='/scatts/new'>New Scatt</Link>
+        <Link to='/new'>New Scatt</Link>
       </div>
     );
   }
