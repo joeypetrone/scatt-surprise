@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './SingleScatt.scss';
 import scattData from '../../../helpers/data/scattData';
@@ -24,9 +25,11 @@ class SingleScatt extends React.Component {
 
   render() {
     const { scatt } = this.state;
+    const { scattId } = this.props.match.params;
+    const editLink = `/edit/${scattId}`;
     return (
-      <div className="SingleScatt" style={{ backgroundColor: scatt.color }}>
-        <h1>{scatt.location}</h1>
+      <div className="SingleScatt m-2 p-4 rounded text-left" style={{ backgroundColor: scatt.color }}>
+        <h1 className='text-center'>{scatt.location}</h1>
         <p>Color: {scatt.color}</p>
         <p>Shape: {scatt.shape}</p>
         <p>Size: {scatt.size}</p>
@@ -34,7 +37,8 @@ class SingleScatt extends React.Component {
         <p>Viscosity: {scatt.viscosity}</p>
         <p>Notes: {scatt.notes}</p>
         <p>Was it fulfilling? { scatt.wasFulfilling ? 'Yes' : 'No' }</p>
-        <button className="btn btn-danger" onClick={this.removeScatt}>Delete</button>
+        <button className="btn btn-danger m-2" onClick={this.removeScatt}>Delete</button>
+        <Link className="btn btn-warning m-2" to={editLink}>Edit</Link>
       </div>
     );
   }

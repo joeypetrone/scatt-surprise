@@ -25,9 +25,12 @@ const postScatt = (newScatt) => axios.post(`${baseUrl}/scatts.json`, newScatt);
 
 const deleteScatt = (scattId) => axios.delete(`${baseUrl}/scatts/${scattId}.json`);
 
+const putScatt = (scattId, updatedScatt) => axios.put(`${baseUrl}/scatts/${scattId}.json`, updatedScatt);
+
 export default {
   getScattsByUid,
   getSingleScatt,
   postScatt,
   deleteScatt,
+  putScatt,
 };
